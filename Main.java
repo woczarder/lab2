@@ -1,36 +1,15 @@
 package dev.hdstudio.wat.lab2;
 
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-
 public class Main {
 
     public static void main(String[] args) {
-        FrequentNames names = new FrequentNames();
-        names.insert("Tomasz");
-        names.insert("Tomasz");
-        names.insert("Rafal");
-        names.insert("Rafal");
-        names.insert("Rafal");
-        names.insert("Wojtek");
-        names.insert("Zuza");
-        names.insert("Zuza");
 
-        names.choose();
-
-
-        Set set = names.frequentNames.entrySet();
-
-        // Get an iterator
-        Iterator i = set.iterator();
-
-        // Display elements
-        while(i.hasNext()) {
-            Map.Entry me = (Map.Entry)i.next();
-            System.out.print(me.getKey() + ": ");
-            System.out.println(me.getValue());
-        }
+        Anchor anchor = new Anchor();
+        anchor.insertAtTheFront(666);
+        anchor.insertAtTheFront(420);
+        anchor.insertAtTheFront(69);
+        anchor.insertAtTheEnd(1337);
+        System.out.println(anchor.toString());
 
     }
 }
